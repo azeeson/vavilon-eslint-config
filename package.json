@@ -1,29 +1,32 @@
 {
-    "name": "vavilon-eslint-config",
-    "version": "0.1.0",
-    "description": "ESLint TypeScript config",
-    "author": "Alexander Medkov <azeeson@gmail.com> (https://twitter.com/azeeson)",
-    "license": "MIT",
-    "homepage": "https://github.com/azeeson/vavilon-eslint-config",
-    "bugs": "https://github.com/azeeson/vavilon-eslint-config/issues",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/azeeson/vavilon-eslint-config.git"
-    },
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [
-      "eslint",
-      "typescript",
-      "config"
-    ],
-    "dependencies": {
-      "@typescript-eslint/eslint-plugin": "^2.10.0",
-      "@typescript-eslint/parser": "^2.10.0",
-      "eslint": "^6.7.2",
-      "typescript": "^3.7.2"
-    }
+  "name": "vavilon-eslint-config",
+  "version": "0.1.2",
+  "description": "ESLint TypeScript config",
+  "author": "Alexander Medkov <azeeson@gmail.com> (https://twitter.com/azeeson)",
+  "license": "MIT",
+  "homepage": "https://github.com/azeeson/vavilon-eslint-config",
+  "bugs": "https://github.com/azeeson/vavilon-eslint-config/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/azeeson/vavilon-eslint-config.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push-patch": "npm version --no-commit-hooks patch && git push && npm publish"
+  },
+  "keywords": [
+    "eslint",
+    "typescript",
+    "config"
+  ],
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
+    "eslint": "^6.7.2",
+    "typescript": "^3.7.2"
+  },
+  "devDependencies": {
+    "husky": "^3.1.0"
   }
-  
+}
