@@ -20,5 +20,7 @@ module.exports = {
 	},
 	// Плагин с наборами правил для TypeScript
 	"plugins": ["@typescript-eslint"],
-    "rules": []
+    "rules": {
+        semi: ['error', 'always']
+    }
 };
