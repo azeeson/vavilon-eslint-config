@@ -27,7 +27,7 @@ module.exports = {
         "linebreak-style": ["error", "unix"],
         "semi": ['error', 'always'],
         // I - у интерфесов
-        "@typescript-eslint/semi": ["error", "never"],
+        "@typescript-eslint/semi": ["error", "always"],
         "@typescript-eslint/interface-name-prefix": ["error", {
             "prefixWithI": "always",
             "allowUnderscorePrefix": false
