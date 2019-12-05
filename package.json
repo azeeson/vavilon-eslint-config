@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-vavilon",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "ESLint TypeScript config",
   "author": "Alexander Medkov <azeeson@gmail.com> (https://twitter.com/azeeson)",
   "license": "MIT",
