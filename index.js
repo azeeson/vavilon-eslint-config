@@ -22,8 +22,12 @@ module.exports = {
 	// Плагин с наборами правил для TypeScript
 	"plugins": ["react", "@typescript-eslint"],
     "rules": {
-        semi: ['error', 'always'],
+        "no-console": "warn",
+        "eol-last": ["error", "always"],
+        "linebreak-style": ["error", "unix"],
+        "semi": ['error', 'always'],
         // I - у интерфесов
+        "@typescript-eslint/semi": ["error", "never"],
         "@typescript-eslint/interface-name-prefix": ["error", {
             "prefixWithI": "always",
             "allowUnderscorePrefix": false
