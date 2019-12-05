@@ -34,6 +34,22 @@ module.exports = {
         "@typescript-eslint/interface-name-prefix": ["error", {
             "prefixWithI": "always",
             "allowUnderscorePrefix": false
-        }]
+        }],
+        "sort-imports": "off",
+        "import/order": ["error", {"groups": [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index"
+        ]}],
+        "import/dynamic-import-chunkname": [2, {
+            "importFunctions": ["dynamicImport"],
+            "webpackChunknameFormat": "[a-zA-Z0-57-9-/_]+"
+        }],
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error"
     }
 };
