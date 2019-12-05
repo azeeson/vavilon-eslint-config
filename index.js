@@ -11,7 +11,8 @@ module.exports = {
 		// Базовые правила для TypeScript
 		"plugin:@typescript-eslint/recommended",
         // Правила TS, требующие инфо о типах
-		"plugin:@typescript-eslint/recommended-requiring-type-checking"
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:react/recommended"
     ],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
@@ -19,8 +20,13 @@ module.exports = {
 		"tsconfigRootDir": "."
 	},
 	// Плагин с наборами правил для TypeScript
-	"plugins": ["@typescript-eslint"],
+	"plugins": ["react", "@typescript-eslint"],
     "rules": {
-        semi: ['error', 'always']
+        semi: ['error', 'always'],
+        // I - у интерфесов
+        "@typescript-eslint/interface-name-prefix": ["error", {
+            "prefixWithI": "always",
+            "allowUnderscorePrefix": false
+        }]
     }
 };
