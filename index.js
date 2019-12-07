@@ -52,6 +52,11 @@ module.exports = {
         "import/newline-after-import": "error",
         "import/no-duplicates": "error",
         "keyword-spacing": "error",
-        "object-curly-spacing": ["error", "never"]
+        "object-curly-spacing": ["error", "never"],
+        "@typescript-eslint/prefer-includes": "off",
+        "@typescript-eslint/no-unused-vars": ["error", {
+            "args": "after-used",
+            "argsIgnorePattern": "^_"
+        }]
     }
 };
