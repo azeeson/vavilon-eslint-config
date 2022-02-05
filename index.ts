@@ -1,9 +1,23 @@
-module.exports = {
-    "env": {
-        "browser": true,
-        "es6": true
+import {
+    Linter
+} from 'eslint';
+
+// "off" or 0 - turn the rule off
+// "warn" or 1 - turn the rule on as a warning (doesn't affect exit code)
+// "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
+
+// export = {
+//     parser: '@typescript-eslint/parser',
+//     parserOptions: { sourceType: 'module' },
+//     plugins: ['@typescript-eslint'],
+//   };
+
+const config: Linter.BaseConfig = {
+    env: {
+        browser: true,
+        es6: true
     },
-    "extends": [
+    extends: [
         // Базовый набор правил eslint
         "eslint:recommended",
         // Отключаем правила из базового набора
@@ -18,14 +32,14 @@ module.exports = {
         "plugin:import/typescript",
         require('./rules/no-constructor-bind'),
     ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
+    parser: "@typescript-eslint/parser",
+    parserOptions: {
         "project": "tsconfig.json",
         "tsconfigRootDir": "."
     },
     // Плагин с наборами правил для TypeScript
-    "plugins": ["react", "@typescript-eslint", "import"],
-    "rules": {
+    plugins: ["react", "@typescript-eslint", "import"],
+    rules: {
         "no-console": "warn",
         "eol-last": ["error", "always"],
         "linebreak-style": ["error", "unix"],
@@ -37,14 +51,16 @@ module.exports = {
             "allowUnderscorePrefix": false
         }],
         "sort-imports": "off",
-        "import/order": ["error", {"groups": [
-            "builtin",
-            "external",
-            "internal",
-            "parent",
-            "sibling",
-            "index"
-        ]}],
+        "import/order": ["error", {
+            "groups": [
+                "builtin",
+                "external",
+                "internal",
+                "parent",
+                "sibling",
+                "index"
+            ]
+        }],
         "import/dynamic-import-chunkname": [2, {
             "importFunctions": ["dynamicImport"],
             "webpackChunknameFormat": "[a-zA-Z0-57-9-/_]+"
@@ -60,4 +76,6 @@ module.exports = {
             "argsIgnorePattern": "^_"
         }]
     }
-};
+}
+
+module.exports = config;
