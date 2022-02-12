@@ -16,7 +16,7 @@ module.exports = {
         "plugin:import/errors",
         "plugin:import/warnings",
         "plugin:import/typescript",
-        require('./rules/no-constructor-bind'),
+        // require('./rules/no-constructor-bind'),
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -32,10 +32,10 @@ module.exports = {
         "semi": ['error', 'always'],
         // I - у интерфесов
         "@typescript-eslint/semi": ["error", "always"],
-        "@typescript-eslint/interface-name-prefix": ["error", {
-            "prefixWithI": "always",
-            "allowUnderscorePrefix": false
-        }],
+        // "@typescript-eslint/interface-name-prefix": ["error", {
+        //     "prefixWithI": "always",
+        //     "allowUnderscorePrefix": false
+        // }],
         "sort-imports": "off",
         "import/order": ["error", {"groups": [
             "builtin",
